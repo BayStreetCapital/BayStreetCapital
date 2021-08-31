@@ -63,7 +63,8 @@
         </p>
       </div>
       <div class="field">
-        <button class="button is-light" style="width:100%;">Login</button>
+        <button class="button is-light" style="width:100%;"onclick="myFunction()">Login</button>
+        <p id="demo" style="color:Red"></p>
       </div>
     </section>
   </section>
@@ -79,7 +80,11 @@
     </p>
   </div>
 </footer>
-
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Incorrect Email/ Password Combination";
+}
+</script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
