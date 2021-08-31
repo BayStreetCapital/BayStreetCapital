@@ -11,6 +11,13 @@
 
   <title>Bay Street Capital!</title>
   <style>
+  div.container.wrapper{
+    background-color: white;
+    min-width: 100%;
+  }
+  body{
+    background-color: #023047;
+  }
   html{
     background-color: #023047;
   }
@@ -18,10 +25,13 @@
   .navbar{
     background-color: #023047;
   }
-  #sticky-footer{
+footer{
     background-color: #023047;
+    align-self: center;
+    width: 100%;
+    text-align: center;
+    height: auto;
   }
-
 
   #division4{
     background-color: #023047;
@@ -43,7 +53,6 @@
     width: 100%;
     color: white;
     font-family: 'Gentium Book Basic', serif;
-    font-size: 3rem;
   }
   .nav-subtitle{
     text-align: center;
@@ -54,7 +63,6 @@
     color: white;
     font-family: 'Gentium Book Basic', serif;
     font-size: 1rem;
-
   }
   .nav.nav-pills{
     text-align: center;
@@ -81,27 +89,27 @@
   .card-body.sty-two{
     background-color: white;
   }
-
   </style>
 </head>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top mx-auto">
     <div class="container">
-      <a class="navbar-brand" href="/">Bay Street Capital</a>
+      <a class="navbar-brand" href="/"><h2>Bay Street Capital</h2></a>
     </div>
     <div class="nav-subtitle mx-auto mb-3">
       Specialists in Industrial Outdoor Storage
     </div>
     <div class="container mx-auto">
-      <ul class="nav nav-pills mx-auto">
+      <ul class="nav nav-pills mx-auto justify-content-center">
         <li role="presentation"><button type="button" id="toggle1" class="btn btn-light">Firm Overview</button></li>
         <li role="presentation"><button type="button" id="toggle2" class="btn btn-light">ISO & ISF</button></li>
         <li role="presentation"><button type="button" id="toggle3" class="btn btn-light">Investor Login</button></li>
       </ul>
     </div>
   </nav>
+  <div class="container wrapper mx-0">
   <span id="division1">
-    <div class="container mt-5 mx-auto">
+    <div class="container mt-3 pb-3 pt-4 mx-auto">
       <div class="card mx-auto">
         <div class="card-body sty-one mx-auto">
           <h3>Firm Overview</h3>
@@ -177,17 +185,22 @@
   </div>
 </div>
 </span>
-<span id="division4">
-  <footer id="sticky-footer" class="flex-shrink-2 py-5 text-white-50">
-    <div class="container text-center pt-5">
-      <small><a class= text-white-50 href="mailto:info@bay-st.com">info@bay-st.com</a></small>
-      <br>
-      <small>&copy; All Rights Reserved 2021 Bay Street Capital</small>
-      <br>
-      <small>Terms and Privacy</small>
-    </div>
+</div>
+  <footer id="footer mx-auto" class="text-white-50">
+    <div class="container pb-1">
+    <small>
+      <a class= text-white-50 href="mailto:info@bay-st.com">
+        info@bay-st.com
+      </a>
+    </small>
+    <br>
+    <small>&copy; All Rights Reserved 2021 Bay Street Capital</small>
+    <br>
+    <small>Terms and Privacy</small>
+  </div>
   </footer>
-</span>
+
+
 <script>
 function myFunction() {
   document.getElementById("demo").innerHTML = "Incorrect Email/ Password Combination";
@@ -197,11 +210,9 @@ function myFunction() {
 const targetDiv1 = document.getElementById("division1");
 const targetDiv2 = document.getElementById("division2");
 const targetDiv3 = document.getElementById("division3");
-const targetDiv4 = document.getElementById("division4");
 targetDiv1.style.display = "none";
 targetDiv2.style.display = "none";
 targetDiv3.style.display = "none";
-targetDiv4.style.display = "block";
 const btn1 = document.getElementById("toggle1");
 btn1.onclick = function () {
   if (targetDiv1.style.display !== "none") {
@@ -210,7 +221,6 @@ btn1.onclick = function () {
     targetDiv1.style.display = "block";
     targetDiv2.style.display = "none";
     targetDiv3.style.display = "none";
-
   }
 };
 
